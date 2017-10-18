@@ -1,28 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <title>Prototype</title>
-    <style>
-        .channel {
-            border: 2px solid black;
-            height: 100px;
-            width: 500px;
-            padding: 20px 20px;
-        }
-    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
 </head>
 <body>
 
-{% for stream in streams %}
-
-<div class="channel" data-stream="{{ stream.name|escape }}">
-    <h3>Channel: {{ stream.name }}</h3>
-    <p>Status: {{ stream.status }}</p>
-    <p>Live: {{ stream.live }} </p>
-</div>
-
-{% endfor %}
+<div id="component"></div>
 
 <script>
     
@@ -53,5 +41,15 @@
     }
 
 </script>
+<script src="{% static 'js/ChatBox.js' %}" type="text/babel"></script>
+<script type="text/babel">
+    
+    ReactDOM.render(
+        <ChatBox />,
+        document.getElementById('chatbox')
+    )
+
+</script>
+
 </body>
 </html>
