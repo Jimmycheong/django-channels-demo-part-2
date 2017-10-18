@@ -28,8 +28,6 @@ with endpoints created by Django REST framework.
 
 The results will update in real time without the client initially sending off HTTP requests! 
 
-<img width="790" alt="screen shot 2017-09-03 at 15 58 00" src="https://user-images.githubusercontent.com/22529514/30004094-bfc5338a-90c0-11e7-99fa-6373891fef3a.png">
-
 # References 
 - https://realpython.com/blog/python/getting-started-with-django-channels/ 
 - https://gearheart.io/blog/creating-a-chat-with-django-channels/ 
